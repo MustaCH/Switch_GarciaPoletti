@@ -38,4 +38,15 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
   },
+
+  confirmedContainer: {
+    height: 150,
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 20,
+    marginVertical: 20,
+  },
+  confirmedTitle: {
+    fontSize: 15,
+  },
 });
