@@ -14,7 +14,11 @@ export default function App() {
   const headerTitle = userNumber ? "Game" : "Welcome";
 
   const Content = () =>
-    userNumber ? <Game /> : <StartGame onStartGame={onStartGame} />;
+    userNumber ? (
+      <Game userNumber={userNumber} />
+    ) : (
+      <StartGame onStartGame={onStartGame} />
+    );
   return (
     <View style={styles.container}>
       <Header title={headerTitle} />
