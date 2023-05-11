@@ -7,4 +7,10 @@ export const theme = {
     white: "#FFFFFF",
     gray: "#cccccc",
   },
+
+  fonts: {
+    myBold: "Poppins-Bold",
+    myReg: "Poppins-Regular",
+    myLight: "Poppins-Ligth",
+  },
 };

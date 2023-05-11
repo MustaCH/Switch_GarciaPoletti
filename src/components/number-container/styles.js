@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
 
   number: {
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: theme.fonts.myBold,
     color: theme.colors.white,
   },
 });

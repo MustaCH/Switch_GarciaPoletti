@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
+    fontFamily: theme.fonts.myLight,
     textAlign: "center",
   },
 
@@ -48,5 +49,6 @@ export const styles = StyleSheet.create({
   },
   confirmedTitle: {
     fontSize: 15,
+    fontFamily: theme.fonts.myReg,
   },
 });
