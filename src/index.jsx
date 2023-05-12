@@ -1,5 +1,5 @@
 import { ActivityIndicator, View } from "react-native";
-import { Game, StartGame } from "./screens/index";
+import { Game, GameOver, StartGame } from "./screens/index";
 import { styles } from "./styles";
 import { useState } from "react";
 import { Header } from "./components";
@@ -8,6 +8,7 @@ import { theme } from "./constants";
 
 export default function App() {
   const [userNumber, setUserNumber] = useState(null);
+  const [guessRound, setGuessRound] = useState(0);
   const [loaded] = useFonts({
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-Bold": require("../assets/fonts/Poppins-Bold.ttf"),
@@ -28,14 +29,22 @@ export default function App() {
     setUserNumber(number);
   };
 
+  const onGameOVer = (rounds) => {
+    setGuessRound(rounds);
+  };
+
   const headerTitle = userNumber ? "Game" : "Welcome";
 
-  const Content = () =>
-    userNumber ? (
-      <Game userNumber={userNumber} />
-    ) : (
-      <StartGame onStartGame={onStartGame} />
-    );
+  const Content = () => {
+    if (userNumber && guessRound <= 0) {
+      return <Game userNumber={userNumber} onGameOVer={onGameOVer} />;
+    }
+    if (guessRound > 0) {
+      return <GameOver />;
+    }
+
+    return <StartGame onStartGame={onStartGame} />;
+  };
   return (
     <View style={styles.container}>
       <Header title={headerTitle} />
