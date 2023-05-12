@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import { theme } from "../../constants";
+
+const { height, width } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +11,7 @@ export const styles = StyleSheet.create({
   },
 
   content: {
-    height: 200,
+    height: height * 0.28,
     alignItems: "center",
     justifyContent: "center",
     marginHorizontal: 20,
