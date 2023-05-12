@@ -33,6 +33,11 @@ export default function App() {
     setGuessRound(rounds);
   };
 
+  const onRestart = () => {
+    setUserNumber(null);
+    setGuessRound(0);
+  };
+
   const headerTitle = userNumber ? "Game" : "Welcome";
 
   const Content = () => {
@@ -40,7 +45,13 @@ export default function App() {
       return <Game userNumber={userNumber} onGameOVer={onGameOVer} />;
     }
     if (guessRound > 0) {
-      return <GameOver />;
+      return (
+        <GameOver
+          rounds={guessRound}
+          userNumber={userNumber}
+          onRestart={onRestart}
+        />
+      );
     }
 
     return <StartGame onStartGame={onStartGame} />;
