@@ -4,6 +4,10 @@ import { theme } from "../../constants";
 const { height, width } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
+  keyboardCont: {
+    flex: 1,
+  },
+
   container: {
     flex: 1,
     backgroundColor: theme.colors.white,
@@ -21,6 +25,15 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 30,
   },
+
+  inputContainerLandscape: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: height * 0.4,
+    marginHorizontal: 20,
+    marginTop: 30,
+  },
+
   label: {
     fontSize: 18,
     fontFamily: theme.fonts.myLight,
@@ -50,6 +63,15 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginVertical: 20,
   },
+
+  confirmedContainerLandscape: {
+    height: height * 0.4,
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 20,
+    marginVertical: 20,
+  },
+
   confirmedTitle: {
     fontSize: 15,
     fontFamily: theme.fonts.myReg,

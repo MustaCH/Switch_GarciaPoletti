@@ -38,7 +38,7 @@ export default function App() {
     setGuessRound(0);
   };
 
-  const headerTitle = userNumber ? "Game" : "Welcome";
+  const headerTitle = userNumber ? "People VS Numbers" : "Welcome";
 
   const Content = () => {
     if (userNumber && guessRound <= 0) {
